@@ -1,7 +1,7 @@
-title: Your awesome title
+title: Test ekscesa theme
 author:
-  name: GitHub User
-  email: your-email@domain.com
+  name: rheotaxis 
+  email: rheotaxis@gmail.com
 description: > # this means to ignore newlines until "show_excerpts:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -53,7 +53,7 @@ minima:
 # - about.md
 
 # Build settings
-theme: minima
+theme: ekscesa
 
 plugins:
  - jekyll-feed
