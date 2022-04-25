@@ -1,0 +1,24 @@
+---
+layout: home
+---
+{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+{%- if page.show_bio %}
+<table>
+  <tr><td>Nomo:</td><td>
+    <a href="{{ page.vikipedio }}">{{ page.nomo }}</a>
+  </td>
+  <td rowspan="3">
+    <img src="{{ page.image | relative_url }}">
+    el: {{ page.preview_source }}
+  </td></tr>
+  {% if page.fikcia %}
+    <tr><td rowspan="2">&nbsp;</td><td>Fikcia Persono</td>
+  {% else %}
+    <tr><td>Nasko:</td><td>{{ page.naskotago | date: date_format }}</td></tr>
+    <tr><td>Morto:</td><td>{{ page.mortotago | date: date_format }}</td></tr>
+  {% endif %}
+</table>
+{% else %}
+<img src="{{ page.image | relative_url }}">
+{% endif %}
+{{ content }}
