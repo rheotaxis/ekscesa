@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name     = "ekscesa"
-  spec.version  = "2.5.1"
+  spec.version  = "2.5.2"
   spec.authors  = ["Joel Glovier, Bruce Thomas"]
   spec.email    = ["jglovier@github.com, rheotaxis@gmail.com"]
 

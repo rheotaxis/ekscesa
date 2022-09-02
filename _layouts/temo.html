@@ -1,0 +1,56 @@
+---
+layout: default
+---
+<div class="home">
+  {%- if page.title -%}
+    <h3 class="page-heading">{{ page.title }}</h3>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- assign date_format = site.minima.date_format | default: "%Y-%m-%d" -%}
+  {%- assign first_date = page.start_date | date: date_format -%}
+  {%- assign last_date = page.end_date |default: "today" |date: date_format -%}
+  {%- assign all_posts = site.posts -%}
+  {%- assign part_counter = 1 -%}
+  {%- for tag in site.tags -%}
+    {%- if tag[0] == page.temo and tag[1].size >= 2 and page.reverse_list -%}
+      {%- assign all_posts = tag[1] | reverse -%}
+      {% break %}
+    {%- elsif tag[0] == page.temo -%}
+      {%- assign all_posts = tag[1] -%}
+      {% break %}
+    {%- else -%}
+      {% assign all_posts = nil %}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- if all_posts.size > 0 and page.temo > "" -%}
+  <a name="post-list-start"></a><hr>
+    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+    <ul class="post-list">
+    {%- for post in all_posts -%}
+      {%- assign post_date = post.date |date: date_format -%}
+      <!-- POST {{ post_date }} -->
+      {%- if post_date < first_date or post_date > last_date -%}
+        {%- continue -%}
+      {%- else -%}
+      <li>
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+          {%- if all_posts.size >= 2 and page.reverse_list -%}
+            {{ post.title | append: " (" | append: forloop.index | append: " el/of " | append: all_posts.size | append: ")" | escape }}
+          {%- else -%}
+            {{ post.title | escape }}
+          {%- endif -%}
+          </a>
+        </h3>
+        {%- if site.show_excerpts -%}
+            {{ post.excerpt }}
+        {%- endif -%}
+      </li>
+      {%- endif -%}
+    {%- endfor -%}
+    </ul>
+  {%- endif -%}
+</div>

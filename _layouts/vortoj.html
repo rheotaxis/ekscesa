@@ -1,0 +1,12 @@
+---
+layout: temo
+openbook_image: "/assets/layout/openbook1.png"
+---
+{{ content }}
+<div class="bottom-center-post">
+{%- if page.corpi_url -%}
+  <p><a target="_blank" href="{{ page.corpi_url }}">
+    <img border="0" src="{{ "/assets/layout/openbook1.png" | relative_url }}" alt="Literaturo Esperanta" class="bottom-center-img" />
+    <br>{{ page.corpi_label }}</a></p>
+{%- endif -%}
+</div>
