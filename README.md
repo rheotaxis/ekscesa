@@ -1,6 +1,6 @@
-# minima
+# ekscesa (a Minima fork)
 
-*Minima is a one-size-fits-all Jekyll theme for writers*. It's Jekyll's default (and first) theme. It's what you get when you run `jekyll new`.
+*Minima is a one-size-fits-all Jekyll theme for writers*. It's Jekyll's default (and first) theme. It's what you get when you run `jekyll new`.  (And, **ekscesa** is my fork that contains layouts for Ekstelu.info blog. Build and install it to get the Ruby gem).
 
 ***Disclaimer:** The information here may vary depending on the version you're using. Please refer to the `README.md` bundled
 within the theme-gem for information specific to your version or by pointing your browser to the Git tag corresponding to your
@@ -38,6 +38,13 @@ Refers to files within the `_layouts` directory, that define the markup for your
   - `page.html` &mdash; The layout for your documents that contain FrontMatter, but are not posts.
   - `post.html` &mdash; The layout for your posts.
 
+Ekscesa adds these layouts:
+
+ - person.html
+ - temo.html
+ - verko.html
+ - vorto.html
+
 #### Home Layout
 
 `home.html` is a flexible HTML layout for the site's landing-page / home-page / index-page. <br/>
@@ -68,6 +75,12 @@ Refers to snippets of code within the `_includes` directory that can be inserted
   - `header.html` &mdash; Defines the site's main header section. By default, pages with a defined `title` attribute will have links displayed here.
   - `social.html` &mdash; Renders social-media icons based on the `minima:social_links` data in the config file.
 
+Ekscesa has altered a few of these includes.
+
+ - head.html
+ - header.html
+ - footer.html
+ - custom-footer.html
 
 ### Sass
 
@@ -323,6 +336,8 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/jekyll
 To set up your environment to develop this theme, run `script/bootstrap`.
 
 To test your theme, run `script/server` (or `bundle exec jekyll serve`) and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme and the contents. As you make modifications, your site will regenerate and you should see the changes in the browser after a refresh.
+
+In order to use the Ekscesa fork, the changes need to be pushed into my fork on GitHub (after rebuilding the Gem). The Gemspec file has already been updated.
 
 ## License
 
