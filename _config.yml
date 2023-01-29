@@ -15,7 +15,7 @@ description: >
   results) and in your feed.xml site description.
 
 # Build settings
-theme: ekscesa
+theme: minima
 
 plugins:
   - jekyll-feed
