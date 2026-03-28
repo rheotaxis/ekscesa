@@ -1,10 +1,17 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |spec|
+<<<<<<< HEAD:ekscesa.gemspec
   spec.name     = "ekscesa"
   spec.version  = "2.5.2"
   spec.authors  = ["Joel Glovier, Bruce Thomas"]
   spec.email    = ["jglovier@github.com, rheotaxis@gmail.com"]
+=======
+  spec.name     = "minima"
+  spec.version  = "3.0.0.dev"
+  spec.authors  = ["Joel Glovier"]
+  spec.email    = ["jglovier@github.com"]
+>>>>>>> bf9ef989246b63536e9db61082f663f1a6d4d9ce:minima.gemspec
 
   spec.summary  = "An excessive fork of minima theme for Jekyll."
   spec.homepage = "https://github.com/rheotaxis/ekscesa"
